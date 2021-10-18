@@ -34,6 +34,11 @@ public class LinkedListTest {
 			this.tail = myNode;
 		}
 	}
+	public INode pop() {
+		INode tempNode = this.head;
+		this.head = head.getNext();
+		return tempNode;	
+	}
 
 	public void insert(INode myNode, INode newNode) {
 		INode tempNode = myNode.getNext();
@@ -52,6 +57,11 @@ public class LinkedListTest {
 		}
 		myNodes.append(tempNode.getkey());
 		System.out.println(myNodes);
+	}
+
+	public void pop(MyNode<Integer> myFirstNode) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
