@@ -39,6 +39,16 @@ public class LinkedListTest {
 		this.head = head.getNext();
 		return tempNode;	
 	}
+	
+	public INode popLastNode() {
+		INode tempNode = head;
+		while(tempNode.getNext() != null) {
+			tempNode = tempNode.getNext();
+		}
+		this.tail = tempNode;
+		 head.getNext().setNext(null);
+		return tempNode;
+	} 
 
 	public void insert(INode myNode, INode newNode) {
 		INode tempNode = myNode.getNext();
